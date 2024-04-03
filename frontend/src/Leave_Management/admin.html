@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Admin Dashboard</h2>
+    <ul>
+      <li><a href="#" class="active">Leave Management</a></li>
+      <li><a href="#">Attendance Management</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <!-- Leave Management Section -->
+      <div id="leaveManagement" class="panel active">
+        <h1>Leave Management</h1>
+        <div class="flex-container">
+          <div class="flex-item" id="leaveRequests">
+            <h2>Leave Requests</h2>
+            <ul>
+              <!-- Leave requests will be dynamically added here -->
+            </ul>
+          </div>
+          <div class="flex-item">
+            <h2>Leave Approved</h2>
+            <ul id="leaveApproved">
+              <!-- Approved leave requests will be dynamically added here -->
+            </ul>
+          </div>
+          <div class="flex-item">
+            <h2>Leave Declined</h2>
+            <ul id="leaveDeclined">
+              <!-- Declined leave requests will be dynamically added here -->
+            </ul>
+          </div>
+          <div class="flex-item">
+            <h2>Total Leaves</h2>
+            <p>Total number of leaves: <span id="totalLeaves">100</span></p>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- Attendance Management Section -->
+      <div id="attendanceManagement" class="panel">
+        <h1>Attendance Management</h1>
+        <div id="attendanceList"></div>
+      </div>
+
+    <div id="leaveModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Leave Request</h2>
+        <p id="employeeNameModal"></p>
+        <p id="leaveTypeModal"></p>
+        <p id="startDateModal"></p>
+        <p id="endDateModal"></p>
+        <div class="button-group">
+          <button id="approveBtn">Approve</button>
+          <button id="declineBtn">Decline</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
